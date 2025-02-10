@@ -20,11 +20,13 @@ inputs:
   pick-one-from-persons-or-team:
     description: "If the pick-one-from-persons-or-team is True, only 1 person from the first team and/or persons will be picked."
     required: false
+    default: false
   include-draft:
     description: "If set to true, DRAFT PRs will also be covered (default=false)"
     required: false
+    default: false
   skip-with-manual-reviewers:
-    description: "If the given nubmer of reviewers is already assigned, auto assign will be skipped"
+    description: "If the given number of reviewers is already assigned, auto assign will be skipped"
     required: false
 
 runs:

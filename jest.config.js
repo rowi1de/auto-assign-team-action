@@ -7,5 +7,6 @@ module.exports = {
   transform: {
     '^.+\\.ts$': 'ts-jest'
   },
-  verbose: true
+  verbose: true,
+  setupFiles: ["<rootDir>/.jest/setEnvVars.js"]
 }

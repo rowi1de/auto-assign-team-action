@@ -8,11 +8,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/auto-assign-review-teams@v1.0.1
+    - uses: actions/auto-assign-review-teams@draft
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         persons: "rowi1de"
         teams: "no-team"
         include-draft: false
         skip-with-manual-reviewers: 1
+        pick-one-from-persons-or-team: false
         

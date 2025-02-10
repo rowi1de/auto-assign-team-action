@@ -94,3 +94,4 @@ typings/
 node_modules
 .DS_Store
 .vscode/settings.json
+/.idea/

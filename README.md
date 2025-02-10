@@ -17,14 +17,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Assign Team and Persons"
-        uses: rowi1de/auto-assign-review-teams@v1.1.3
+        uses: rowi1de/auto-assign-review-teams@v1.1.4
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           org: "github-org" #only needed for  pick-one-from-persons-or-team=true
           teams: "gitub-org-team" # only works for GitHub Organisation/Teams
           persons: "rowi1de" # add individual persons here
           include-draft: false # Draft PRs will be skipped (default: false)
-          skip-with-manual-reviewers: 0 # Skip this action, if the number of reviwers was already assigned (default: 0)
+          skip-with-manual-reviewers: 0 # Skip this action, if the number of reviewers was already assigned (default: 0)
           pick-one-from-persons-or-team: false # Will pick out one reviewer from persons and/or the first GitHub team and "org" set (default: false)
 ```
 

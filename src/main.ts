@@ -54,13 +54,15 @@ export async function run() {
     const teams = core
         .getInput('teams')
         .split(',')
-        .map((a) => a.trim());
+        .map((a) => a.trim())
+        .filter((team) => team.length > 0);
     const persons = core
         .getInput('persons')
         .split(',')
     // filter out PR creator
         .filter((user) => user !== issue.owner)
-        .map((a) => a.trim());
+        .map((a) => a.trim())
+        .filter((user) => user.length > 0);
 
     if (teams.length == 0 && persons.length == 0) {
       core.setFailed('Please specify \'teams\' and/or \'persons\'');
